@@ -3,9 +3,9 @@
 int main(void){
     float teihen,takasa,menseki;
 
-    printf("Enter base lenght\n");
+    printf("Enter base lenght:\n");
     scanf("%f\n",&teihen);
-    printf("Enter height\n");
+    printf("Enter height:\n");
     scanf("%f\n",&takasa);
 
    menseki = teihen*takasa*0.5;
