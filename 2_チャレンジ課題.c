@@ -7,7 +7,6 @@ int main(void){
   int b;
   srand(time(NULL));
   a = rand();
-  printf("%d\n", a);
   b = a%2;
 
  if(b == 1){
