@@ -2,7 +2,7 @@
 int main(void){
 int r =0;
 int u =0;
-int i =1;
+int n =0;
 FILE *fp;
 fp = fopen("ritsumeikan.txt", "rt");
 if(fp == NULL){
@@ -20,83 +20,83 @@ while(1){
     }
     if( (moji =='i')){
         if (n == 1){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='t')){
          if (n == 2){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='s')){
          if (n == 3){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='u')){
          if (n == 4){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='m')){
          if (n == 5){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='e')){
          if (n == 6){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='i')){
          if (n == 7){
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='k')){
         if (n == 8)
         {
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='a')){
         if (n == 9)
         {
-            n++
+            n++;
         }else{
-            n =0
+            n =0;
         }
     }
     if( (moji =='n')){
       if (n == 10)
         {
             n = 0;
-            r++
+            r++;
         }else{
-            n =0
+            n =0;
         }
     }
     
     printf("%c", moji);
 }
 printf("\n");
-printf("大文字の「R」は%d個、小文字の「u」は%d個でした",r,u);
+printf("大文字の「R」は%d個、小文字の「u」は%d個でした",r,n);
 fclose(fp);
 return 1;
 }

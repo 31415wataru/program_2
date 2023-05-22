@@ -1,6 +1,8 @@
 #include<stdio.h>
 int main(void){
 FILE *fp;
+int r =0;
+int u =0;
 fp = fopen("ritsumeikan.txt", "rt");
 if(fp == NULL){
 printf("ファイルが開けませんでした\n");
@@ -14,9 +16,11 @@ break;
 }
 if( (moji =='R')){
     printf("[");
+    r++;
 }
 if( (moji =='u')){
     printf("["); 
+    u++;
 }
 printf("%c", moji);
 if( (moji =='R')){
@@ -27,6 +31,8 @@ if( (moji =='u')){
 }
 }
 printf("\n");
+printf("大文字の「R」は%d個、小文字の「u」は%d個でした",r,u);
 fclose(fp);
+
 return 1;
 }
