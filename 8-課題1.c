@@ -22,7 +22,18 @@ int main(void){
         pro[i].heikin += pro[i].report[j];
     }
     pro[i].heikin = pro[i].heikin/2;
-    printf("学籍番号%dさんの平均点は%f点です\n\n", pro[i].bango,pro[i].heikin);
+    if((pro[i].heikin >= 90)&&(pro[i].heikin <=100)){
+        pro[i].hyouka = "A+";
+    }else if((pro[i].heikin >= 80)&&(pro[i].heikin <90)){
+        pro[i].hyouka = "A";
+    }else if((pro[i].heikin >= 70)&&(pro[i].heikin <80)){
+        pro[i].hyouka = "B";
+    }else if((pro[i].heikin >= 60)&&(pro[i].heikin <70)){
+        pro[i].hyouka = "C";
+    }else{
+        pro[i].hyouka = "F";
+    }
+    printf("学籍番号%dさんの平均点は%f点で評価は%sです\n\n", pro[i].bango,pro[i].heikin,pro[i].hyouka);
   }
   
 }
