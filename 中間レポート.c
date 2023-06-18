@@ -4,8 +4,8 @@ int main(void){
 FILE *fp;
 fp = fopen("data.txt", "rt");
 if(fp == NULL){
-printf("ファイルが開けませんでした\n");
-return 0;
+ printf("ファイルが開けませんでした\n");
+ return 0;
 }
 int id[N];
 int number[N];
@@ -33,43 +33,41 @@ int min = 500;
 int max_n = 0;
 int min_n = 0;
 for(i=0;i<40;i++){
-ret = fscanf(fp, "%d %d %d %d %d %d",&number[i],&score_1[i],&score_2[i],&score_3[i],&score_4[i],&score_5[i]);
-sum[i] = score_1[i] + score_2[i] + score_3[i] + score_4[i] + score_5[i] ;
-avarage[i] = (float)sum[i]/5;
-//printf("学籍番号：%d, 得点1：%d, 得点2：%d, 得点3：%d, 得点4：%d, 得点5：%d, 合計：%d, 平均：%f,\n",number[i], score_1[i],score_2[i],score_3[i],score_4[i],score_5[i],sum[i],avarage[i]);
-n = number[i] -1;
-id[n] = number[i] -1;
-score_1_up[n] = score_1[i];
-score_2_up[n] = score_2[i];
-score_3_up[n] = score_3[i];
-score_4_up[n] = score_4[i];
-score_5_up[n] = score_5[i];
-sum_up[n] = sum[i];
-avarage_up[n] = avarage[i];
-int a = id[n];
-
-if (a != n){
+ ret = fscanf(fp, "%d %d %d %d %d %d",&number[i],&score_1[i],&score_2[i],&score_3[i],&score_4[i],&score_5[i]);
+ sum[i] = score_1[i] + score_2[i] + score_3[i] + score_4[i] + score_5[i] ;
+ avarage[i] = (float)sum[i]/5;
+ n = number[i] -1;
+ id[n] = number[i] -1;
+ score_1_up[n] = score_1[i];
+ score_2_up[n] = score_2[i];
+ score_3_up[n] = score_3[i];
+ score_4_up[n] = score_4[i];
+ score_5_up[n] = score_5[i];
+ sum_up[n] = sum[i];
+ avarage_up[n] = avarage[i];
+ int a = id[n];
+ if (a != n){
     id[n] = n;
-}
-if(sum_up[n] > max){
+ }
+ if(sum_up[n] > max){
      max = sum_up[n];
      max_n = n;
-}
-if(sum_up[n] < min){
+ }
+ if(sum_up[n] < min){
      min = sum_up[n];
     min_n = n;
-}
-if(sum_up[n] >= 450){
+ }
+ if(sum_up[n] >= 450){
     assessment[n] = 'A' ;
-}else if(sum_up[n] >= 400){
+  }else if(sum_up[n] >= 400){
     assessment[n] = 'A' ;
-}else if(sum_up[n] >= 350){
+  }else if(sum_up[n] >= 350){
     assessment[n] = 'B' ;
-}else if(sum_up[n] >= 300){
+  }else if(sum_up[n] >= 300){
     assessment[n] = 'C' ;
-}else{
+  }else{
     assessment[n] = 'F' ;    
-}
+ }
 }
 //printf("%c",assessment[22]);
 //printf("%d",id[39]);
@@ -147,7 +145,7 @@ printf("\nC評価%d人",count_C);
 for(a=0;a<count_C;a++){
     printf("*");
 }
-printf("\nD評価%d人",count_F);
+printf("\nF評価%d人",count_F);
 for(a=0;a<count_F;a++){
     printf("*");
 }
