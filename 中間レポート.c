@@ -27,6 +27,7 @@ char assessment[N];
 int ret;
 int i;
 int n;
+int a;
 int max = 0;
 int min = 500;
 int max_n = 0;
@@ -72,6 +73,7 @@ if(sum_up[n] >= 450){
 }
 //printf("%c",assessment[22]);
 //printf("%d",id[39]);
+printf("データを学籍番号順に, 合計, 平均, H/L, 評価を付加して出力します\n");
 for(n=0;n<40;n++){
     if (max_n == n){
         if(sum_up[n] >= 450){
@@ -102,7 +104,7 @@ for(n=0;n<40;n++){
     }   
 }
 }
-printf("評価の分布をヒストグラムで出力します");
+printf("評価の分布をヒストグラムで出力します\n");
 int count_A_ = 0;
 int count_A = 0;
 int count_B = 0;
@@ -111,8 +113,11 @@ int count_F = 0;
 for(n=0;n<40;n++){
     switch (assessment[n]){
     case 'A':
-    
-     
+        if(sum_up[n] >= 450){
+         count_A_ += 1;   
+        }else{
+         count_A += 1;  
+        }
     break;
     case 'B':
         count_B += 1;
@@ -126,7 +131,26 @@ for(n=0;n<40;n++){
         break;
     }
 }
-printf("%d",count_C);
+printf("A+評価%d人",count_A_);
+for(a=0;a<count_A_;a++){
+    printf("*");
+}
+printf("\nA評価 %d人",count_A);
+for(a=0;a<count_A;a++){
+    printf("*");
+}
+printf("\nB評価 %d人",count_B);
+for(a=0;a<count_B;a++){
+    printf("*");
+}
+printf("\nC評価%d人",count_C);
+for(a=0;a<count_C;a++){
+    printf("*");
+}
+printf("\nD評価%d人",count_F);
+for(a=0;a<count_F;a++){
+    printf("*");
+}
 fclose(fp);
 return 1;
 }
