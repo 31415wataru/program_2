@@ -1,5 +1,7 @@
 #include <stdio.h>
-struct batter{
+#define student_no 3
+#define report_no 2
+struct seiseki{
 char name[20];
 double average;
 int homerun;
