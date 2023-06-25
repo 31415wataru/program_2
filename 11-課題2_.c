@@ -17,15 +17,15 @@ void printall( struct element *p){
   }
 }
 void printall_reverse( struct element *p){
-     if(p->next == NULL) {
-        putchar('\n');
+    if(p->next == NULL) {
+      putchar('\n');
     }else {
-        p = p->next;
-        putchar(p->data);
-        putchar('\n');
-        printall_reverse(p);
-        putchar('\n');
-        putchar(p->data);
+      p = p->next;
+      putchar(p->data);
+      putchar('\n');
+      printall_reverse(p);
+      putchar('\n');
+      putchar(p->data);
     }
 }
 int main(void){
