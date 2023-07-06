@@ -9,7 +9,9 @@ struct stack{
  char box[smax];
  int top;
 };
+#include "code2_2.h"
 #include "code2_3.h"
+
 void printall( struct element *p){
   while (p) {
   printf("%c\n", p->data);
