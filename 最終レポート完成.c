@@ -110,7 +110,7 @@ int main(void){
             break;
           }
         }
-        printf("背番号 \t 打率 \t HR \t 打点\n"); //HRはホームラン
+        printf("背番号 \t 打率 \t HR \t 打点\n"); 
         if(choice[0]==0 && choice[1]==1 && choice[2]==2){
           printf("打率を昇順に並び替えます\n");
           bubblesort_daritsu(data, N);
@@ -174,7 +174,7 @@ int main(void){
           printf("打点で昇順に並び替えます\n");
           insertionsort_daten(data, N);
         }
-        if(choice[0]==0 && choice[1]==10){
+        if(choice[0]==1 && choice[1]==10){
           printf("ホームランで昇順に並び替えます\n");
           selectionsort_homerun(data, N);
         }
@@ -211,11 +211,12 @@ int main(void){
           insertionsort_daten(data, N);
         }
         for(i=0; i<26; i++){
-          if(i==1){
+          
+          if(data[i].daritsu == 0){
 
           }else{
             printf("%2d\t%.3lf\t%2d\t%3d\n", data[i].sebangou, data[i].daritsu, data[i].homerun, data[i].daten);
-          }
+        }
         }
     printf("まだ続けますか？Yes=0/No=1");
     if(c==1){
