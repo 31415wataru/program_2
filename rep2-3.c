@@ -88,15 +88,8 @@ printf("背番号 \t 打率 \t HR \t 打点\n"); //HRはホームラン
 
     printf("\n打率を昇順に並び替えます\n");
     bubblesort_daritsu(data, N);
-     //ソートした打率のデータを表示
-    for(i=1; i<=N; i++){
-      printf("%2d\t%.3lf\t%2d\t%3d\n", data[i].sebangou, data[i].daritsu, data[i].homerun, data[i].daten);
-    }
     printf("ホームランで昇順に並び替えます\n");
     selectionsort_homerun(data, N);
-    for(i=1; i<=N; i++){
-      printf("%2d\t%.3lf\t%2d\t%3d\n", data[i].sebangou, data[i].daritsu, data[i].homerun, data[i].daten);
-    }
     printf("打点で昇順に並び替えます\n");
     insertionsort_daten(data, N);
     for(i=1; i<=N; i++){
