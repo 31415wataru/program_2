@@ -100,6 +100,8 @@ infile = fopen("seiseki.txt", "rt");
  printf("ファイルの読み込みが完了しました\n");
  fclose(infile);
  // 読み込んだデータの表示
+    int c = 0;
+    while(c==0){
     for(i=0;i<3;i++){
       printf("なにで並べますか？(0打率、1ホームラン、2打点、10出力)");
       scanf("%d",&choice[i]);
@@ -225,17 +227,15 @@ infile = fopen("seiseki.txt", "rt");
       insertionsort_daten(data, N);
  
       }
-      
-    /*printf("\n打率を昇順に並び替えます\n");
-    bubblesort_daritsu(data, N);
-    printf("打点で昇順に並び替えます\n");
-    insertionsort_daten(data, N);
-    printf("ホームランで昇順に並び替えます\n");
-    selectionsort_homerun(data, N);
-    printf("背番号 \t 打率 \t HR \t 打点\n"); //HRはホームラン
-    */
-    for(i=0; i<25; i++){
+    for(i=0; i<26; i++){
+      if(i==1){
+
+      }else{
       printf("%2d\t%.3lf\t%2d\t%3d\n", data[i].sebangou, data[i].daritsu, data[i].homerun, data[i].daten);
+      }
+    }
+    printf("繰り返しますか？Yes=0/No=1");
+    scanf("%d",&c);
     }
 
  return 0;

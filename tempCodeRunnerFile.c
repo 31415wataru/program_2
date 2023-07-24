@@ -1,1 +1,1 @@
-data[i].daritsu
+void selectionsort_homerun(struct batter a[], int n){
