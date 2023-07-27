@@ -1,3 +1,4 @@
+//!!!!!!!!!!!!!![注意]実行を終了するときはターミナルの指示に従う事!!!!!!!!!!!!!!!!!!!
 #include <stdio.h>
 #define N 26 //打者の人数
 struct batter {
@@ -81,7 +82,7 @@ void  insertionsort_daten(struct batter a[], int n){
   }
 
 }
-/*-------------------------------------------------*/
+/*------------------------2ここからmain関数-------------------------*/
 
 int main(void){
     struct batter data[N+1];
@@ -211,12 +212,10 @@ int main(void){
           insertionsort_daten(data, N);
         }
         for(i=0; i<26; i++){
-          
-          if(data[i].daritsu == 0){
-
+          if(data[i].daritsu == 0){//オーバーフローした値をカット
           }else{
             printf("%2d\t%.3lf\t%2d\t%3d\n", data[i].sebangou, data[i].daritsu, data[i].homerun, data[i].daten);
-        }
+          }
         }
     printf("まだ続けますか？Yes=0/No=1");
     if(c==1){
